@@ -7,6 +7,7 @@ class Admin::ProductsController < ApplicationController
 
   def show
     @product_photo = ProductPhoto.new
+    #@product = Product.find[:id]
   end
 
   def new

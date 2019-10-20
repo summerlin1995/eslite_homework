@@ -3,6 +3,12 @@
 
 <h1>Show page</h1>
 
-Product infos
 
+Product infos
+<h2>Product Name: <%= @product.name %></h2>
+<p>SKU: <%= @product.sku %></p>
+<p>Status: <%= @product.status %></p>
+<p>Published: <%= @product.published %></p>
+<p>Price: <%= @product.price %></p>
+<p>Original Price: <%= @product.original_price %></p>
 <%= link_to  "Back to products", admin_products_path %>
