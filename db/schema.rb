@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_20_032108) do
+ActiveRecord::Schema.define(version: 2019_10_19_095254) do
 
   create_table "product_photos", force: :cascade do |t|
     t.integer "product_id", null: false
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_10_20_032108) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.boolean "admin", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true

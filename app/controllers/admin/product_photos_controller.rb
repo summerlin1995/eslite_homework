@@ -1,4 +1,4 @@
-class Admin::ProductsPhotoController < ApplicationController
+class Admin::ProductPhotosController < ApplicationController
   before_action :set_product
 
   def index
@@ -16,7 +16,6 @@ class Admin::ProductsPhotoController < ApplicationController
 
   private
 
-
   def set_product
     @product = Product.find(params[:product_id])
   end
@@ -24,5 +23,4 @@ class Admin::ProductsPhotoController < ApplicationController
   def product_photo_params
     params.require(:product_photo).permit(:photo)
   end
-
 end
