@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     get 'products_photo/index'
     get 'products_photo/create'
   end
+
   namespace :admin do
     get 'products/index'
     get 'products/show'
@@ -10,6 +11,9 @@ Rails.application.routes.draw do
     get 'products/create'
     get 'products/edit'
   end
+
+  root "pages#home"
+
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   namespace :admin do

@@ -1,2 +1,21 @@
 <h1>Admin::ProductsPhoto#index</h1>
 <p>Find me in app/views/admin/products_photo/index.html.erb</p>
+
+<h1>See the photos</h1>
+
+<% @product_photos.each do |p| %>
+  <%= cl_image_tag p.photo, height: 200, width: 200, crop: :fill %>
+
+<% end %>
+
+
+<h1>Add a photo</h1>
+
+
+<%= simple_form_for([:admin, @product, @product_photo]) do |f| %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.button :submit%>
+<% end %>
+
+<%= link_to  "Back to products", admin_products_path %>

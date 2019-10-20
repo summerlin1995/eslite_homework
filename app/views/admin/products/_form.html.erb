@@ -1,0 +1,9 @@
+<%= simple_form_for([:admin, @product]) do |f| %>
+  <%= f.input :sku, label: "sku" %>
+  <%= f.input :name, label: "name" %>
+  <%= f.input :status, collection: ["on shelf", "no shelf", "restock"] %>
+  <%= f.input :published, as: :boolean, label: "published"%>
+  <%= f.input :price, label: "price" %>
+  <%= f.input :original_price, label: "price" %>
+  <%= f.button :submit%>
+<% end %>
